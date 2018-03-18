@@ -2,7 +2,7 @@ language: true
 
 before_install:
   - chmod +x ./build/testAssignment2.sh
-  - chmod +x ./build/.api.sh
+  - chmod +x ./build/.api
 
 install: true
 
