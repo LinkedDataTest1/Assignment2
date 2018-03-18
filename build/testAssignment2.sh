@@ -13,7 +13,7 @@ missingttl=false
 username=${AUTHOR_NAME}
 #Check files exist
 #	{username}.rdf
-if [ ! -f $username.rdf ]
+if [ ! -f "$username.rdf" ]
 then
     echo "RDF file missing. Make sure it has the correct format" $username.rdf
 	missingrdf=true
@@ -21,29 +21,30 @@ then
 fi
 
 #	{username}.ttl
-if [ ! -f $username.ttl ]
+if [ ! -f "$username.ttl" ]
 then
     echo "TTL file missing. Make sure it has the correct format" $username.ttl
 	missingttl=true
 	errors=$((errors+1))
 fi
 #	{username}.png
-if [ ! -f $username.png ]
+if [ ! -f "$username.png" ]
 then
     echo "PNG file missing. Make sure it has the correct format" $username.png
 	errors=$((errors+1))
 fi
 
 #Validate rdf
-if [ "$missingrdf" != true ]
-then
+#if [ "$missingrdf" != true ]
+#then
 
-fi
+#fi
+
 #Validate ttl
-if [ "$missingttl" != true ]
-then
+#if [ "$missingttl" != true ]
+#then
 
-fi
+#fi
 
 #Add name to report file if it doesnt exist with field of correct or incorrect build
 
