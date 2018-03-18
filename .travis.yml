@@ -1,8 +1,8 @@
 language: true
 
 before_install:
-  - chmod +x testAssignment2.sh
-  - chmod +x .api.sh
+  - chmod +x ./build/testAssignment2.sh
+  - chmod +x ./build/.api.sh
 
 install: true
 
@@ -10,11 +10,11 @@ before_script:
   - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
   
 script:
-  - ./testAssignment2.sh > err
+  - ./build/testAssignment2.sh > ./build/err
   
 after_success:
-  - ./.api true
+  - ./build/.api true
   
 after_failure:
-  - ./.api false
+  - ./build/.api false
   
