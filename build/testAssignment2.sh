@@ -13,7 +13,6 @@ missingttl=false
 username=${AUTHOR_NAME}
 #Check files exist
 #	{username}.rdf
-echo "$username.rdf"
 if [ ! -f "$username.rdf" ]
 then
     echo "RDF file missing. Make sure it has the correct format" $username.rdf
