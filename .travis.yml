@@ -10,8 +10,8 @@ before_install:
 install: true
 
 before_script:
-  - export AUTHOR_NAME=$(curl -H "Authorization: token ${TOKEN}" -X GET "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls/${TRAVIS_PULL_REQUEST}" | jq -r '.user.login')
-  - echo $AUTHOR_NAME
+  - curl -H "Authorization: token ${TOKEN}" -X GET "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls/${TRAVIS_PULL_REQUEST}" | jq -r '.user.login' > name
+  - export AUTHOR_NAME=$(cat name)
   
 script:
   - ./build/testAssignment2.sh > err
