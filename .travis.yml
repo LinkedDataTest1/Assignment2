@@ -11,7 +11,7 @@ before_script:
   - echo $AUTHOR_NAME
   
 script:
-  - ./build/testAssignment2.sh > ./build/err
+  - ./build/testAssignment2.sh > err
   
 after_success:
   - ./build/.api true
