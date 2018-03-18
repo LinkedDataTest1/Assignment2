@@ -14,8 +14,8 @@ script:
   - ./build/testAssignment2.sh > err
   
 after_success:
-  - ./build/.api true
+  - .api true
   
 after_failure:
-  - ./build/.api false
+  - .api false
   
