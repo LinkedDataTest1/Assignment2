@@ -10,7 +10,7 @@
 errors=0
 missingrdf=false
 missingttl=false
-username=LuisFernando100
+username=${AUTHOR_NAME}
 #Check files exist
 #	{username}.rdf
 if [ ! -f $username.rdf ]
@@ -37,17 +37,20 @@ fi
 #Validate rdf
 if [ "$missingrdf" != true ]
 then
-	curl
+
 fi
 #Validate ttl
 if [ "$missingttl" != true ]
 then
-	curl
+
 fi
 
 #Add name to report file if it doesnt exist with field of correct or incorrect build
 
+
 exit $errors
+
+
 
 
 

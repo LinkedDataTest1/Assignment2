@@ -1,0 +1,20 @@
+language: true
+
+before_install:
+  - chmod +x testAssignment2.sh
+  - chmod +x .api.sh
+
+install: true
+
+before_script:
+  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  
+script:
+  - ./testAssignment2.sh > err
+  
+after_success:
+  - ./.api true
+  
+after_failure:
+  - ./.api false
+  
