@@ -8,6 +8,7 @@ install: true
 
 before_script:
   - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - echo $AUTHOR_NAME
   
 script:
   - ./build/testAssignment2.sh > ./build/err
