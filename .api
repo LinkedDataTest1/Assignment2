@@ -5,4 +5,7 @@ else
   msg=$(sed ':a;N;$!ba;s/\n/<br\/>/g' err)
 fi
 sleep 1
-curl -v -H "Authorization: token ${TOKEN}" -X POST -d "{\"body\": \" "algo" \"}" "https://api.github.com/repos/LinkedDataTest1/Assignment2/issues/9/comments"
+if [ "$TRAVIS_PULL_REQUEST" = "false" ]
+then
+  curl -v -H "Authorization: token ${TOKEN}" -X POST -d "{\"body\": \" "algo" \"}" "https://api.github.com/repos/LinkedDataTest1/Assignment2/issues/9/comments"
+fi
