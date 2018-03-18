@@ -8,13 +8,6 @@ before_install:
   - chmod +x .api
 
 install: true
-
-before_script:
-  - touch json
-  - touch name
-  - curl -H "Authorization: token ${TOKEN}" -X GET "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls/${TRAVIS_PULL_REQUEST}" > json
-  - cat json | jq -r '.user.login' > name
-  - export AUTHOR_NAME=$(cat name)
   
 script:
   - ./build/testAssignment2.sh > err
