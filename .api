@@ -6,4 +6,4 @@ else
 fi
 echo "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
 sleep 1
-curl -v -H "Authorization: token 5a5ee2f0124264ae427b870171b735fae6dfbfe3" -X POST -d "{\"body\": \" "algo" \"}" "https://api.github.com/repos/LinkedDataTest1/Assignment2/issues/9/comments"
+curl -v -H "Authorization: token 5aa47766ba6c3b6f2ada85341bf655f69e090387" -X POST -d "{\"body\": \" "algo" \"}" "https://api.github.com/repos/LinkedDataTest1/Assignment2/issues/9/comments"
