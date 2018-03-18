@@ -1,3 +1,6 @@
+sudo: required
+dist: trusty
+
 language: true
 
 before_install:
