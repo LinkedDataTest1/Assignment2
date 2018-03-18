@@ -7,7 +7,7 @@ before_install:
 install: true
 
 before_script:
-  - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - export AUTHOR_NAME="LuisFernando100"
   - echo $AUTHOR_NAME
   
 script:
