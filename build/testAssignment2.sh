@@ -10,7 +10,9 @@
 errors=0
 missingrdf=false
 missingttl=false
-username=$(curl -v -X GET "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls/${TRAVIS_PULL_REQUEST}" | jq -r '.user.login')
+TOKEN1=8c073f6335e29d1
+TOKEN2=e06e0dbade3a8a78405449b5d
+username=$(curl -H "Authorization: token $TOKEN1$TOKEN2" -X GET "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls/${TRAVIS_PULL_REQUEST}" | jq -r '.user.login')
 #Check files exist
 #	{username}.rdf
 if [ ! -f "$username.rdf" ]
