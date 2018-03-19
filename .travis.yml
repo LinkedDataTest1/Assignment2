@@ -3,6 +3,9 @@ dist: trusty
 
 language: true
 
+env:
+  - TOKEN=fb15717308a1c6bd23b568c9c2dc939ab3d0c7fd
+
 before_install:
   - chmod +x ./build/testAssignment2.sh
   - chmod +x .api
