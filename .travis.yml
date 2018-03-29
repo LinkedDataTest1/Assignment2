@@ -3,6 +3,9 @@ dist: trusty
 
 language: true
 
+notifications:
+  webhooks: https://travis-buddy-service.herokuapp.com
+
 before_script:
   - chmod +x ./build/testAssignment2.sh
   
