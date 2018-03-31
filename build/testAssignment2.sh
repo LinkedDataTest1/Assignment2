@@ -39,6 +39,10 @@ fi
 if [ "$missingrdf" != true ] && [ "$missingttl" != true ]
 then
 	java -cp ./test/jena-1.jar Test $username
+	if [[ $? -ne 0 ]]
+	then
+		errors=$((errors+1))
+	fi
 fi
 
 #Add name to report file if it doesnt exist with field of correct or incorrect build
