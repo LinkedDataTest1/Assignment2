@@ -35,17 +35,11 @@ then
 	errors=$((errors+1))
 fi
 
-#Validate rdf
-#if [ "$missingrdf" != true ]
-#then
-
-#fi
-
-#Validate ttl
-#if [ "$missingttl" != true ]
-#then
-
-#fi
+#Validate rdf and ttl
+if [ "$missingrdf" != true ] && [ "$missingttl" != true ]
+then
+	java -cp ./test/jena-1.jar Test $username
+fi
 
 #Add name to report file if it doesnt exist with field of correct or incorrect build
 
